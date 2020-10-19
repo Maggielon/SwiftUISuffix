@@ -11,8 +11,6 @@
 		5D3DD717253D718200B3EE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3DD716253D718200B3EE9A /* Assets.xcassets */; };
 		5D3DD71A253D718200B3EE9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3DD719253D718200B3EE9A /* Preview Assets.xcassets */; };
 		5D3DD71D253D718200B3EE9A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3DD71B253D718200B3EE9A /* LaunchScreen.storyboard */; };
-		5D3DD725253D71B400B3EE9A /* SuffixSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD724253D71B400B3EE9A /* SuffixSequence.swift */; };
-		5D3DD727253D71BD00B3EE9A /* SuffixIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD726253D71BD00B3EE9A /* SuffixIterator.swift */; };
 		5D3DD731253D75F200B3EE9A /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD730253D75F200B3EE9A /* ShareViewController.swift */; };
 		5D3DD734253D75F200B3EE9A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3DD732253D75F200B3EE9A /* MainInterface.storyboard */; };
 		5D3DD738253D75F200B3EE9A /* ShareExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5D3DD72E253D75F200B3EE9A /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -21,6 +19,9 @@
 		5D3DD742253D837000B3EE9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD741253D837000B3EE9A /* SceneDelegate.swift */; };
 		5D3DD744253D83C000B3EE9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD743253D83C000B3EE9A /* ContentView.swift */; };
 		5D3DD746253D8A3400B3EE9A /* ShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD745253D8A3400B3EE9A /* ShareViewModel.swift */; };
+		5DEA582B253DA73F00542ADD /* SuffixSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD724253D71B400B3EE9A /* SuffixSequence.swift */; };
+		5DEA582C253DA74200542ADD /* SuffixIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD726253D71BD00B3EE9A /* SuffixIterator.swift */; };
+		5DEA582E253DB33A00542ADD /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA582D253DB33A00542ADD /* Suffix.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		5D3DD741253D837000B3EE9A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5D3DD743253D83C000B3EE9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5D3DD745253D8A3400B3EE9A /* ShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewModel.swift; sourceTree = "<group>"; };
+		5DEA582D253DB33A00542ADD /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +114,6 @@
 				5D3DD71B253D718200B3EE9A /* LaunchScreen.storyboard */,
 				5D3DD71E253D718200B3EE9A /* Info.plist */,
 				5D3DD718253D718200B3EE9A /* Preview Content */,
-				5D3DD724253D71B400B3EE9A /* SuffixSequence.swift */,
-				5D3DD726253D71BD00B3EE9A /* SuffixIterator.swift */,
 				5D3DD743253D83C000B3EE9A /* ContentView.swift */,
 			);
 			path = SwiftUISuffix;
@@ -130,6 +130,7 @@
 		5D3DD72F253D75F200B3EE9A /* ShareExtension */ = {
 			isa = PBXGroup;
 			children = (
+				5DEA582A253DA73500542ADD /* Suffix */,
 				5D3DD728253D744400B3EE9A /* ContentViewModel.swift */,
 				5D3DD714253D718100B3EE9A /* ContentView.swift */,
 				5D3DD730253D75F200B3EE9A /* ShareViewController.swift */,
@@ -138,6 +139,16 @@
 				5D3DD745253D8A3400B3EE9A /* ShareViewModel.swift */,
 			);
 			path = ShareExtension;
+			sourceTree = "<group>";
+		};
+		5DEA582A253DA73500542ADD /* Suffix */ = {
+			isa = PBXGroup;
+			children = (
+				5D3DD724253D71B400B3EE9A /* SuffixSequence.swift */,
+				5D3DD726253D71BD00B3EE9A /* SuffixIterator.swift */,
+				5DEA582D253DB33A00542ADD /* Suffix.swift */,
+			);
+			path = Suffix;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,8 +256,6 @@
 				5D3DD742253D837000B3EE9A /* SceneDelegate.swift in Sources */,
 				5D3DD744253D83C000B3EE9A /* ContentView.swift in Sources */,
 				5D3DD711253D718100B3EE9A /* AppDelegate.swift in Sources */,
-				5D3DD725253D71B400B3EE9A /* SuffixSequence.swift in Sources */,
-				5D3DD727253D71BD00B3EE9A /* SuffixIterator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +265,10 @@
 			files = (
 				5D3DD73F253D834200B3EE9A /* ContentView.swift in Sources */,
 				5D3DD731253D75F200B3EE9A /* ShareViewController.swift in Sources */,
+				5DEA582E253DB33A00542ADD /* Suffix.swift in Sources */,
+				5DEA582B253DA73F00542ADD /* SuffixSequence.swift in Sources */,
 				5D3DD746253D8A3400B3EE9A /* ShareViewModel.swift in Sources */,
+				5DEA582C253DA74200542ADD /* SuffixIterator.swift in Sources */,
 				5D3DD740253D834B00B3EE9A /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

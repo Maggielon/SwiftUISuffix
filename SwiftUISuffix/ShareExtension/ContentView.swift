@@ -8,11 +8,11 @@
 
 import SwiftUI
 import MobileCoreServices
+import Combine
 
 struct ContentView: View {
     
-    @ObservedObject var  viewModel = ContentViewModel()
-    @Binding var text: String
+    @EnvironmentObject var viewModel: ContentViewModel
     
     var body: some View {
         VStack {
@@ -22,12 +22,15 @@ struct ContentView: View {
                 Text("5x").tag(2)
             }.pickerStyle(SegmentedPickerStyle())
             .padding(.horizontal, 15)
+            .padding(.top, 20)
+            List(self.viewModel.allSuffix) { suffix in
+                HStack {
+                    Text(suffix.string)
+                    Spacer()
+                    Text("\(suffix.count)")
+                }
+                
+            }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(text: .constant(""))
     }
 }

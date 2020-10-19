@@ -12,7 +12,7 @@ import MobileCoreServices
 
 class ShareViewController: UIViewController {
     
-    @ObservedObject var shareViewModel = ShareViewModel()
+    @Published var contentViewModel = ContentViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class ShareViewController: UIViewController {
     func setup() {
         view.backgroundColor = .white
         
-        let contentView = ContentView(text: $shareViewModel.text)
+        let contentView = ContentView().environmentObject(self.contentViewModel)
         
         let vc  = UIHostingController(rootView: contentView)
         addChild(vc)
@@ -47,7 +47,9 @@ class ShareViewController: UIViewController {
                 provider.loadItem(forTypeIdentifier: contentType, options: nil) { [weak self] text, error in
                     guard let strongify = self else { return }
                     guard error == nil else { return }
-                    strongify.shareViewModel.text = (text as? String) ?? ""
+                    DispatchQueue.main.async {
+                        strongify.contentViewModel.text = (text as? String) ?? ""
+                    }
                 }
             }
         }

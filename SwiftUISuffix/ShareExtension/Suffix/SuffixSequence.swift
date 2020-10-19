@@ -12,7 +12,7 @@ struct SuffixSequence: Sequence {
     
     let string: String
     
-    func makeIterator() -> some IteratorProtocol {
+    func makeIterator() -> SuffixIterator {
         SuffixIterator(string: string)
     }
 }
