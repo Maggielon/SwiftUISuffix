@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D013DAA253E021E007DCA01 /* SuffixService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D013DA9253E021E007DCA01 /* SuffixService.swift */; };
+		5D013DAF253E0547007DCA01 /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D013DAE253E0547007DCA01 /* SortType.swift */; };
 		5D3DD711253D718100B3EE9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD710253D718100B3EE9A /* AppDelegate.swift */; };
 		5D3DD717253D718200B3EE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3DD716253D718200B3EE9A /* Assets.xcassets */; };
 		5D3DD71A253D718200B3EE9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3DD719253D718200B3EE9A /* Preview Assets.xcassets */; };
@@ -49,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5D013DA9253E021E007DCA01 /* SuffixService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixService.swift; sourceTree = "<group>"; };
+		5D013DAE253E0547007DCA01 /* SortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortType.swift; sourceTree = "<group>"; };
 		5D3DD70D253D718100B3EE9A /* SwiftUISuffix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUISuffix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3DD710253D718100B3EE9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D3DD714253D718100B3EE9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +91,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D013DAD253E048A007DCA01 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				5D3DD728253D744400B3EE9A /* ContentViewModel.swift */,
+				5D3DD714253D718100B3EE9A /* ContentView.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		5D3DD704253D718100B3EE9A = {
 			isa = PBXGroup;
 			children = (
@@ -130,13 +143,13 @@
 		5D3DD72F253D75F200B3EE9A /* ShareExtension */ = {
 			isa = PBXGroup;
 			children = (
+				5D013DAD253E048A007DCA01 /* Content */,
 				5DEA582A253DA73500542ADD /* Suffix */,
-				5D3DD728253D744400B3EE9A /* ContentViewModel.swift */,
-				5D3DD714253D718100B3EE9A /* ContentView.swift */,
 				5D3DD730253D75F200B3EE9A /* ShareViewController.swift */,
 				5D3DD732253D75F200B3EE9A /* MainInterface.storyboard */,
 				5D3DD735253D75F200B3EE9A /* Info.plist */,
 				5D3DD745253D8A3400B3EE9A /* ShareViewModel.swift */,
+				5D013DAE253E0547007DCA01 /* SortType.swift */,
 			);
 			path = ShareExtension;
 			sourceTree = "<group>";
@@ -147,6 +160,7 @@
 				5D3DD724253D71B400B3EE9A /* SuffixSequence.swift */,
 				5D3DD726253D71BD00B3EE9A /* SuffixIterator.swift */,
 				5DEA582D253DB33A00542ADD /* Suffix.swift */,
+				5D013DA9253E021E007DCA01 /* SuffixService.swift */,
 			);
 			path = Suffix;
 			sourceTree = "<group>";
@@ -267,6 +281,8 @@
 				5D3DD731253D75F200B3EE9A /* ShareViewController.swift in Sources */,
 				5DEA582E253DB33A00542ADD /* Suffix.swift in Sources */,
 				5DEA582B253DA73F00542ADD /* SuffixSequence.swift in Sources */,
+				5D013DAF253E0547007DCA01 /* SortType.swift in Sources */,
+				5D013DAA253E021E007DCA01 /* SuffixService.swift in Sources */,
 				5D3DD746253D8A3400B3EE9A /* ShareViewModel.swift in Sources */,
 				5DEA582C253DA74200542ADD /* SuffixIterator.swift in Sources */,
 				5D3DD740253D834B00B3EE9A /* ContentViewModel.swift in Sources */,

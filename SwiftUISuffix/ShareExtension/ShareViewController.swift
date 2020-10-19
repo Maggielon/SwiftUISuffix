@@ -24,7 +24,8 @@ class ShareViewController: UIViewController {
     func setup() {
         view.backgroundColor = .white
         
-        let contentView = ContentView().environmentObject(self.contentViewModel)
+        let contentView = ContentView()
+            .environmentObject(self.contentViewModel)
         
         let vc  = UIHostingController(rootView: contentView)
         addChild(vc)
