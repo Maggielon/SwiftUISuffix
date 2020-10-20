@@ -40,7 +40,7 @@ struct ContentView: View {
                             Spacer()
                             Text("\(suffix.count)")
                         }
-                    }
+                    }.id(UUID())
                 }
             } else if self.viewModel.selected == 1 {
                 List(self.viewModel.top3Suffix) { suffix in

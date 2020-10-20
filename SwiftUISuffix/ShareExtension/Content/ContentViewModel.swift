@@ -16,7 +16,7 @@ final class ContentViewModel: ObservableObject {
     
     @Published var searchText: String = ""
     
-    var sortType: SortType {
+    private var sortType: SortType {
         SortType(rawValue: self.selectedSort) ?? .asc
     }
     
@@ -33,11 +33,12 @@ final class ContentViewModel: ObservableObject {
         $text
             .sink { value in
                 self.service.suffixes(for: value, type: self.sortType)
+                self.allSuffix = self.service.search(text: "", sort: self.sortType)
             }
             .store(in: &subscriptions)
         $selectedSort
             .sink { value in
-                self.service.sort(SortType(rawValue: value) ?? .asc)
+                self.allSuffix = self.service.search(text: "", sort: SortType(rawValue: value) ?? .asc)
             }
             .store(in: &subscriptions)
         service.$suffixes
@@ -55,7 +56,7 @@ final class ContentViewModel: ObservableObject {
         $searchText.removeDuplicates()
             .debounce(for: 0.5, scheduler: DispatchQueue.main)
             .sink { searchText in
-                self.allSuffix = self.service.search(text: searchText)
+                self.allSuffix = self.service.search(text: searchText, sort: self.sortType)
             }.store(in: &subscriptions)
     }
 }

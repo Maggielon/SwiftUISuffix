@@ -23,7 +23,7 @@ final class SuffixService: ObservableObject {
     func suffixes(for text: String, type: SortType) {
         guard !text.isEmpty else { return }
         var suffixes: [Suffix] = []
-        let array = text.components(separatedBy: CharacterSet(charactersIn: " \n\t"))
+        let array = text.components(separatedBy: CharacterSet.alphanumerics.inverted)
         let sequences = array.compactMap {
             SuffixSequence(string: $0.lowercased())
         }
@@ -37,26 +37,14 @@ final class SuffixService: ObservableObject {
             }
         }
         self.allSuffixes = suffixes
-        self.suffixes = suffixes
         self.top3Suffixes = self.getTop(by: 3)
         self.top5Suffixes = self.getTop(by: 5)
-        self.sort(type)
     }
     
-    func sort(_ type: SortType) {
-        switch type {
-        case .asc:
-            self.allSuffixes = self.allSuffixes.sorted { $0.string < $1.string }
-            self.suffixes = self.allSuffixes
-        case .desc:
-            self.allSuffixes = self.allSuffixes.sorted { $0.string > $1.string }
-            self.suffixes = self.allSuffixes
-        }
-    }
-    
-    func search(text: String) -> [Suffix] {
-        guard !text.isEmpty else { return self.allSuffixes }
-        return self.allSuffixes.filter { $0.string.contains(text.lowercased()) }
+    func search(text: String, sort type: SortType = .asc) -> [Suffix] {
+        return self.allSuffixes
+            .filter { text.isEmpty ? true : $0.string.contains(text.lowercased()) }
+            .sorted { type == .asc ? $0.string < $1.string : $0.string > $1.string }
     }
     
     private func getTop(by length: Int, count: Int = 10) -> [Suffix] {
