@@ -54,7 +54,7 @@ final class ContentViewModel: ObservableObject {
                 self.top5Suffix = value
             }.store(in: &subscriptions)
         $searchText.removeDuplicates()
-            .debounce(for: 0.5, scheduler: DispatchQueue.main)
+            .debounce(for: .milliseconds(500), scheduler: DispatchQueue.main)
             .sink { searchText in
                 self.allSuffix = self.service.search(text: searchText, sort: self.sortType)
             }.store(in: &subscriptions)
