@@ -72,6 +72,7 @@ struct ContentView: View {
                             Spacer()
                             if item.time != nil {
                                 Text("\(item.time ?? 0)")
+                                .background(item.color)
                             }
                             if item.isLoading {
                                 Spinner(style: .medium)

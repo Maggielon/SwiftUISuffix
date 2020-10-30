@@ -79,6 +79,16 @@ final class ContentViewModel: ObservableObject {
             }
             return job
         }
+        scheduler.completion = {
+            let count = self.history.count
+            let sortedHistory = self.history
+                .sorted(by: { $0.time ?? 0 < $1.time ?? 0 })
+            for (index, item) in sortedHistory.enumerated() {
+                let r = Double(index) / Double(count)
+                item.color = Color(r: r)
+            }
+            self.objectWillChange.send()
+        }
         scheduler.execute()
     }
 }
@@ -92,7 +102,8 @@ extension Item: Identifiable {
 class Item {
     var text: String
     var time: TimeInterval? = nil
-    var isLoading: Bool = false 
+    var isLoading: Bool = false
+    var color: Color = .white
     
     init(text: String) {
         self.text = text

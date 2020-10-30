@@ -26,6 +26,7 @@
 		5DEA16A8254C0271009A72BA /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA16A7254C0271009A72BA /* UserDefaultsManager.swift */; };
 		5DEA16AA254C051E009A72BA /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA16A9254C051E009A72BA /* Spinner.swift */; };
 		5DEA16AC254C1265009A72BA /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA16AB254C1265009A72BA /* Job.swift */; };
+		5DEA16AE254C1E0A009A72BA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA16AD254C1E0A009A72BA /* Color.swift */; };
 		5DEA582B253DA73F00542ADD /* SuffixSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD724253D71B400B3EE9A /* SuffixSequence.swift */; };
 		5DEA582C253DA74200542ADD /* SuffixIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD726253D71BD00B3EE9A /* SuffixIterator.swift */; };
 		5DEA582E253DB33A00542ADD /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA582D253DB33A00542ADD /* Suffix.swift */; };
@@ -80,6 +81,7 @@
 		5DEA16A7254C0271009A72BA /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		5DEA16A9254C051E009A72BA /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		5DEA16AB254C1265009A72BA /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		5DEA16AD254C1E0A009A72BA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		5DEA582D253DB33A00542ADD /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,6 +175,7 @@
 				5D013DAE253E0547007DCA01 /* SortType.swift */,
 				5DEA16A7254C0271009A72BA /* UserDefaultsManager.swift */,
 				5DEA16A9254C051E009A72BA /* Spinner.swift */,
+				5DEA16AD254C1E0A009A72BA /* Color.swift */,
 			);
 			path = ShareExtension;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				5D3DD731253D75F200B3EE9A /* ShareViewController.swift in Sources */,
 				5DEA16A8254C0271009A72BA /* UserDefaultsManager.swift in Sources */,
 				5DEA582E253DB33A00542ADD /* Suffix.swift in Sources */,
+				5DEA16AE254C1E0A009A72BA /* Color.swift in Sources */,
 				5DEA16AA254C051E009A72BA /* Spinner.swift in Sources */,
 				5DEA16AC254C1265009A72BA /* Job.swift in Sources */,
 				5DEA582B253DA73F00542ADD /* SuffixSequence.swift in Sources */,
