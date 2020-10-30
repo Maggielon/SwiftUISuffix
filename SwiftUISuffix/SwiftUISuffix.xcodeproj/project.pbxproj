@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5D013DAA253E021E007DCA01 /* SuffixService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D013DA9253E021E007DCA01 /* SuffixService.swift */; };
 		5D013DAF253E0547007DCA01 /* SortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D013DAE253E0547007DCA01 /* SortType.swift */; };
+		5D2E8E91254ADBB700157A90 /* JobQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2E8E90254ADBB700157A90 /* JobQueue.swift */; };
+		5D2E8E93254ADBC900157A90 /* JobScheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2E8E92254ADBC900157A90 /* JobScheduler.swift */; };
 		5D3DD711253D718100B3EE9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD710253D718100B3EE9A /* AppDelegate.swift */; };
 		5D3DD717253D718200B3EE9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3DD716253D718200B3EE9A /* Assets.xcassets */; };
 		5D3DD71A253D718200B3EE9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3DD719253D718200B3EE9A /* Preview Assets.xcassets */; };
@@ -21,6 +23,9 @@
 		5D3DD742253D837000B3EE9A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD741253D837000B3EE9A /* SceneDelegate.swift */; };
 		5D3DD744253D83C000B3EE9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD743253D83C000B3EE9A /* ContentView.swift */; };
 		5D3DD746253D8A3400B3EE9A /* ShareViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD745253D8A3400B3EE9A /* ShareViewModel.swift */; };
+		5DEA16A8254C0271009A72BA /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA16A7254C0271009A72BA /* UserDefaultsManager.swift */; };
+		5DEA16AA254C051E009A72BA /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA16A9254C051E009A72BA /* Spinner.swift */; };
+		5DEA16AC254C1265009A72BA /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA16AB254C1265009A72BA /* Job.swift */; };
 		5DEA582B253DA73F00542ADD /* SuffixSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD724253D71B400B3EE9A /* SuffixSequence.swift */; };
 		5DEA582C253DA74200542ADD /* SuffixIterator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3DD726253D71BD00B3EE9A /* SuffixIterator.swift */; };
 		5DEA582E253DB33A00542ADD /* Suffix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DEA582D253DB33A00542ADD /* Suffix.swift */; };
@@ -53,6 +58,8 @@
 /* Begin PBXFileReference section */
 		5D013DA9253E021E007DCA01 /* SuffixService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuffixService.swift; sourceTree = "<group>"; };
 		5D013DAE253E0547007DCA01 /* SortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortType.swift; sourceTree = "<group>"; };
+		5D2E8E90254ADBB700157A90 /* JobQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobQueue.swift; sourceTree = "<group>"; };
+		5D2E8E92254ADBC900157A90 /* JobScheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobScheduler.swift; sourceTree = "<group>"; };
 		5D3DD70D253D718100B3EE9A /* SwiftUISuffix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUISuffix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3DD710253D718100B3EE9A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D3DD714253D718100B3EE9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +77,9 @@
 		5D3DD741253D837000B3EE9A /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5D3DD743253D83C000B3EE9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5D3DD745253D8A3400B3EE9A /* ShareViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewModel.swift; sourceTree = "<group>"; };
+		5DEA16A7254C0271009A72BA /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		5DEA16A9254C051E009A72BA /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		5DEA16AB254C1265009A72BA /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		5DEA582D253DB33A00542ADD /* Suffix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Suffix.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +108,16 @@
 				5D3DD714253D718100B3EE9A /* ContentView.swift */,
 			);
 			path = Content;
+			sourceTree = "<group>";
+		};
+		5D2E8E8F254ADBA500157A90 /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				5D2E8E90254ADBB700157A90 /* JobQueue.swift */,
+				5D2E8E92254ADBC900157A90 /* JobScheduler.swift */,
+				5DEA16AB254C1265009A72BA /* Job.swift */,
+			);
+			path = Job;
 			sourceTree = "<group>";
 		};
 		5D3DD704253D718100B3EE9A = {
@@ -143,6 +163,7 @@
 		5D3DD72F253D75F200B3EE9A /* ShareExtension */ = {
 			isa = PBXGroup;
 			children = (
+				5D2E8E8F254ADBA500157A90 /* Job */,
 				5D013DAD253E048A007DCA01 /* Content */,
 				5DEA582A253DA73500542ADD /* Suffix */,
 				5D3DD730253D75F200B3EE9A /* ShareViewController.swift */,
@@ -150,6 +171,8 @@
 				5D3DD735253D75F200B3EE9A /* Info.plist */,
 				5D3DD745253D8A3400B3EE9A /* ShareViewModel.swift */,
 				5D013DAE253E0547007DCA01 /* SortType.swift */,
+				5DEA16A7254C0271009A72BA /* UserDefaultsManager.swift */,
+				5DEA16A9254C051E009A72BA /* Spinner.swift */,
 			);
 			path = ShareExtension;
 			sourceTree = "<group>";
@@ -279,12 +302,17 @@
 			files = (
 				5D3DD73F253D834200B3EE9A /* ContentView.swift in Sources */,
 				5D3DD731253D75F200B3EE9A /* ShareViewController.swift in Sources */,
+				5DEA16A8254C0271009A72BA /* UserDefaultsManager.swift in Sources */,
 				5DEA582E253DB33A00542ADD /* Suffix.swift in Sources */,
+				5DEA16AA254C051E009A72BA /* Spinner.swift in Sources */,
+				5DEA16AC254C1265009A72BA /* Job.swift in Sources */,
 				5DEA582B253DA73F00542ADD /* SuffixSequence.swift in Sources */,
 				5D013DAF253E0547007DCA01 /* SortType.swift in Sources */,
+				5D2E8E91254ADBB700157A90 /* JobQueue.swift in Sources */,
 				5D013DAA253E021E007DCA01 /* SuffixService.swift in Sources */,
 				5D3DD746253D8A3400B3EE9A /* ShareViewModel.swift in Sources */,
 				5DEA582C253DA74200542ADD /* SuffixIterator.swift in Sources */,
+				5D2E8E93254ADBC900157A90 /* JobScheduler.swift in Sources */,
 				5D3DD740253D834B00B3EE9A /* ContentViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

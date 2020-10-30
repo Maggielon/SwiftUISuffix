@@ -20,6 +20,7 @@ struct ContentView: View {
                 Text("All").tag(0)
                 Text("3x").tag(1)
                 Text("5x").tag(2)
+                Text("Feed").tag(3)
             }.pickerStyle(SegmentedPickerStyle())
             if self.viewModel.selected == 0 {
                 VStack {
@@ -50,7 +51,7 @@ struct ContentView: View {
                         Text("\(suffix.count)")
                     }
                 }
-            } else {
+            } else if self.viewModel.selected == 2 {
                 List(self.viewModel.top5Suffix) { suffix in
                     HStack {
                         Text(suffix.string)
@@ -58,8 +59,29 @@ struct ContentView: View {
                         Text("\(suffix.count)")
                     }
                 }
+            } else {
+                VStack {
+                    Button("Test suffix array", action: {
+                        self.viewModel.test()
+                    })
+                    .padding(.top, 20)
+                    List(self.viewModel.history) { item in
+                        HStack {
+                            Text(item.text)
+                                .lineLimit(1)
+                            Spacer()
+                            if item.time != nil {
+                                Text("\(item.time ?? 0)")
+                            }
+                            if item.isLoading {
+                                Spinner(style: .medium)
+                            }
+                        }
+                    }
+                }
             }
-        }.padding(.top, 20)
+        }
+        .padding(.top, 20)
         .padding(.horizontal, 15)
     }
 }

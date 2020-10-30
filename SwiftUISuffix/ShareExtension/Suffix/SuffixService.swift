@@ -21,7 +21,14 @@ final class SuffixService: ObservableObject {
     private init() { }
     
     func suffixes(for text: String, type: SortType) {
-        guard !text.isEmpty else { return }
+        let suffixes: [Suffix] = self.simpleSuffix(for: text)
+        self.allSuffixes = suffixes
+        self.top3Suffixes = self.getTop(by: 3)
+        self.top5Suffixes = self.getTop(by: 5)
+    }
+    
+    func simpleSuffix(for text: String) -> [Suffix] {
+        guard !text.isEmpty else { return [] }
         var suffixes: [Suffix] = []
         let array = text.components(separatedBy: CharacterSet.alphanumerics.inverted)
         let sequences = array.compactMap {
@@ -36,9 +43,7 @@ final class SuffixService: ObservableObject {
                 }
             }
         }
-        self.allSuffixes = suffixes
-        self.top3Suffixes = self.getTop(by: 3)
-        self.top5Suffixes = self.getTop(by: 5)
+        return suffixes
     }
     
     func search(text: String, sort type: SortType = .asc) -> [Suffix] {

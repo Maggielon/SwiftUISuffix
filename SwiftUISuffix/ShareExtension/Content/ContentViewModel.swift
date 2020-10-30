@@ -25,6 +25,9 @@ final class ContentViewModel: ObservableObject {
     @Published private(set) var top3Suffix: [Suffix] = []
     @Published private(set) var top5Suffix: [Suffix] = []
     
+    @Published private(set) var history: [Item] = []
+    @Published private(set) var isLoading: Bool = false
+    
     private var service = SuffixService.shared
     
     private var subscriptions = Set<AnyCancellable>()
@@ -34,6 +37,8 @@ final class ContentViewModel: ObservableObject {
             .sink { value in
                 self.service.suffixes(for: value, type: self.sortType)
                 self.allSuffix = self.service.search(text: "", sort: self.sortType)
+                let history = UserDefaultsManager.shared[.history] as? [String] ?? [String]()
+                self.history = history.compactMap { Item(text: $0) }
             }
             .store(in: &subscriptions)
         $selectedSort
@@ -58,5 +63,38 @@ final class ContentViewModel: ObservableObject {
             .sink { searchText in
                 self.allSuffix = self.service.search(text: searchText, sort: self.sortType)
             }.store(in: &subscriptions)
+    }
+    
+    func test() {
+        self.isLoading = true
+        let scheduler = JobScheduler()
+        scheduler.jobs = self.history.compactMap { item in
+            item.isLoading = true
+            let queue = JobQueue(jobs: [{
+                _ = self.service.simpleSuffix(for: item.text)
+            }])
+            let job = Job(queue: queue) { time in
+                item.time = time
+                item.isLoading = false
+            }
+            return job
+        }
+        scheduler.execute()
+    }
+}
+
+extension Item: Identifiable {
+    public var id: String {
+        UUID().uuidString
+    }
+}
+
+class Item {
+    var text: String
+    var time: TimeInterval? = nil
+    var isLoading: Bool = false 
+    
+    init(text: String) {
+        self.text = text
     }
 }

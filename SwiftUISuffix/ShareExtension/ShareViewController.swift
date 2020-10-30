@@ -49,7 +49,11 @@ class ShareViewController: UIViewController {
                     guard let strongify = self else { return }
                     guard error == nil else { return }
                     DispatchQueue.main.async {
-                        strongify.contentViewModel.text = (text as? String) ?? ""
+                        guard let text = text as? String else { return }
+                        var array = UserDefaultsManager.shared[.history] as? [String] ?? [String]()
+                        array.append(text)
+                        UserDefaultsManager.shared[.history] = array
+                        strongify.contentViewModel.text = text
                     }
                 }
             }
